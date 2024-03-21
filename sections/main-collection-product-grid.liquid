@@ -111,6 +111,13 @@
       {%- endif -%}
 
       <style>
+        .product-grid-container .collection li {
+  transition: transform 0.5s ease; /* Defines a transition effect for the transform property over 0.5 seconds with ease timing function */
+}
+
+.product-grid-container .collection li:hover {
+  transform: rotate(1deg); /* Rotates the list item by 1 degree on hover */
+}
       </style>
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
