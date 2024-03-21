@@ -221,6 +221,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_banner_3NxbD6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_bnTaQR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_bxten9": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_pqBW6f": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bnTaQR",
+        "text_bxten9",
+        "buttons_pqBW6f"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/city-woman-fashion_925x_2x_059cda64-6605-4d3a-8c12-2fb0e21d5144.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -228,6 +276,7 @@
     "featured_collection",
     "rich_text_zdGkh9",
     "multirow_VcgdY6",
-    "collection_list_XGxHpL"
+    "collection_list_XGxHpL",
+    "image_banner_3NxbD6"
   ]
 }
