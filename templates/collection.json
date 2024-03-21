@@ -11,7 +11,8 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-
+        ".product-grid-container .collection li {transition: transform 0.5s ease;}",
+        ".product-grid-container .collection li:hover {transform: rotate(1deg);}"
       ],
       "settings": {
         "products_per_page": 16,
