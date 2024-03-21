@@ -4,6 +4,9 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "custom_css": [
+        ".product-grid-container:hover .collection li {transform: rotate(45deg);}"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
