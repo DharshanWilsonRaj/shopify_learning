@@ -11,7 +11,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        ".product-grid-container .collection li:hover {background-color:red}"
+        ".product-grid-container .collection li:hover {transform: rotate(4deg); z-index:12}"
       ],
       "settings": {
         "products_per_page": 16,
