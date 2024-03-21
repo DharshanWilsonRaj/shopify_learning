@@ -5,7 +5,7 @@
     "footer": {
       "type": "footer",
       "custom_css": [
-        ".product-grid-container .collection li:hover {transform: rotate(45deg);}"
+        ".product-grid-container .collection li:hover {background-color:red}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
