@@ -213,7 +213,7 @@
         "title": "Collections",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
@@ -249,27 +249,15 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "buttons_jWK6iF": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_bnTaQR",
         "text_bxten9",
-        "buttons_pqBW6f",
-        "buttons_jWK6iF"
+        "buttons_pqBW6f"
       ],
       "custom_css": [
-        ".banner__buttons{margin:20px}"
+        ".banner__buttons {margin: 20px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/city-woman-fashion_925x_2x_059cda64-6605-4d3a-8c12-2fb0e21d5144.jpg",
