@@ -283,8 +283,6 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <p>Hellow from  local </p>
-    {% render 'tutorial' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -294,6 +292,7 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+    {% sections 'tutorial-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

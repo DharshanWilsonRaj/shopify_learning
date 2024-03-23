@@ -1,0 +1,176 @@
+{{ 'section-tutorial.css' | asset_url | stylesheet_tag }}
+
+{% assign products = section.blocks | where: 'type', 'section_product' %}
+{% assign collections = section.blocks | where: 'type', 'section_collection' %}
+
+<div class="section_internal_container" style="--primary-color:{{ section.settings.color_setting }}">
+  {% for product in products %}
+    {%- assign title = product.settings.title | default: product.settings.product.title -%}
+    {%- assign image = product.settings.image_picker | default: product.settings.product.featured_image -%}
+    <div {{ product.shopify_attributes }}>
+      <div>
+        {% if image %}
+          {{ image | image_url: width: 300 | image_tag }}
+        {% endif %}
+      </div>
+      {{- title -}}
+    </div>
+  {% endfor %}
+
+  {% for collection in collections %}
+    {%- assign title = collection.settings.title | default: collection.settings.collection.title -%}
+    {%- assign image = collection.settings.image_picker | default: collection.settings.collection.featured_image -%}
+    <div {{ collection.shopify_attributes }}>
+      <div>
+        {% if image %}
+          {{ image | image_url: width: 300 | image_tag }}
+        {% endif %}
+      </div>
+      {{- title -}}
+    </div>
+  {% endfor %}
+
+  <button class="button">button</button>
+</div>
+{% schema %}
+{
+  "name": "Section Tutorial",
+  "tag": "section",
+  "class": "section-tutorial",
+  "limit": 2,
+
+  "disabled_on": {
+    "templates": ["collection"],
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_setting",
+      "label": "Text setting",
+      "default": "Enter your text related to the page"
+    },
+    {
+      "type": "textarea",
+      "id": "textarea_setting",
+      "label": "Text Area setting"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext_setting",
+      "label": "Rich Text"
+    },
+    {
+      "type": "select",
+      "id": "select_setting",
+      "label": "Select Setting",
+      "options": [
+        {
+          "value": "value_1",
+          "label": "Value 1",
+          "group": "group1"
+        },
+        {
+          "value": "value_2",
+          "label": "Value 2",
+          "group": "group1"
+        },
+        {
+          "value": "value_3",
+          "label": "Value 3",
+          "group": "group2"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "color_setting",
+      "label": "Color "
+    },
+    {
+      "type": "color_background",
+      "id": "color_background_setting",
+      "label": "Color Background "
+    },
+    {
+      "type": "image_picker",
+      "id": "image_picker_setting",
+      "label": "Image Picker"
+    },
+    {
+      "type": "video",
+      "id": "video_settting",
+      "label": "Video Setting"
+    },
+    {
+      "type": "product",
+      "id": "product_setting",
+      "label": "Product"
+    },
+    {
+      "type": "article",
+      "id": "article",
+      "label": "Article"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "label": "Product",
+          "id": "product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "product title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_picker",
+          "label": "Image Picker"
+        }
+      ],
+      "limit": 2
+    },
+    {
+      "type": "section_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "label": "Collection",
+          "id": "collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "collection "
+        },
+        {
+          "type": "image_picker",
+          "id": "image_picker",
+          "label": "Image Picker"
+        }
+      ],
+      "limit": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sections Tutorial",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
